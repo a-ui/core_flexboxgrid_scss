@@ -1,0 +1,10 @@
+**/.*
+css
+design
+img
+js
+src
+vendor
+bower.json
+Gruntfile.js
+index.html
