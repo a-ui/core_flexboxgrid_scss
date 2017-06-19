@@ -1,11 +1,11 @@
 :root {
-  --gutter-width: 1rem;
-  --outer-margin: 2rem;
+  --gutter-width: 1.5rem;
+  --outer-margin: 0.75rem;
   --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
   --half-gutter-width: calc((var(--gutter-width) * 0.5));
   --xs-min: 30;
-  --sm-min: 48;
-  --md-min: 64;
+  --sm-min: 45;
+  --md-min: 62;
   --lg-min: 75;
   --screen-xs-min: var(--xs-min)em;
   --screen-sm-min: var(--sm-min)em;
@@ -16,8 +16,8 @@
   --container-lg: calc(var(--lg-min) + var(--gutter-width));
 }
 
-@custom-media --sm-viewport only screen and (min-width: 48em);
-@custom-media --md-viewport only screen and (min-width: 64em);
+@custom-media --sm-viewport only screen and (min-width: 45em);
+@custom-media --md-viewport only screen and (min-width: 62em);
 @custom-media --lg-viewport only screen and (min-width: 75em);
 
 .container-fluid, .container {
