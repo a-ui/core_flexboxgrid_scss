@@ -1,8 +1,8 @@
 {
   "name": "flexboxgrid",
-  "version": "6.3.1",
+  "version": "1.0.0",
   "license": "Apache 2",
-  "homepage": "https://github.com/kristoferjoseph/flexboxgrid",
+  "homepage": "https://github.com/a-ui/core_flexboxgrid_scss",
   "authors": [
     "@dam"
   ],
