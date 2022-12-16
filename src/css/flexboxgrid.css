@@ -1,24 +1,6 @@
-/*:root {
-  --gutter-width: 1.5rem;
-  --outer-margin: 0.75rem;
-  --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
-  --half-gutter-width: calc((var(--gutter-width) * 0.5));
-  --xs-min: 30;
-  --sm-min: 45;
-  --md-min: 62;
-  --lg-min: 75;
-  --screen-xs-min: var(--xs-min)em;
-  --screen-sm-min: var(--sm-min)em;
-  --screen-md-min: var(--md-min)em;
-  --screen-lg-min: var(--lg-min)em;
-  --container-sm: calc(var(--sm-min) + var(--gutter-width));
-  --container-md: calc(var(--md-min) + var(--gutter-width));
-  --container-lg: calc(var(--lg-min) + var(--gutter-width));
-}*/
-
 :root {
   --gutter-width: 1.5rem;
-  --outer-margin: 0.75rem;
+  --outer-margin: 1.5rem;
   --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
   --half-gutter-width: calc((var(--gutter-width) * 0.5));
   --xs-min: 0;
@@ -32,6 +14,7 @@
 @custom-media --md-viewport only screen and (min-width: 45rem);
 @custom-media --lg-viewport only screen and (min-width: 62rem);
 @custom-media --xl-viewport only screen and (min-width: 75rem);
+@custom-media --hero-viewport only screen and (min-width: 84rem); /* (1200+3*24+72) */
 
 @custom-media --xs-only only screen and (max-width: 29.9375rem);
 @custom-media --sm-only only screen and (min-width: 30rem) and (max-width: 44.9375rem);
@@ -41,22 +24,23 @@
 
 .u-container {
   box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  padding: 0 .75rem;
+  margin: 0 auto;
+  max-width: var(--xl-min);
+  padding: 0 var(--outer-margin);
+  width: 100%;
 }
 
-@media (--sm-viewport) {
-  .u-container {
-    padding: 0 1.5rem;
-  }
+.u-hero-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 6rem; /* A-logo + 24px */
+  padding-right: var(--outer-margin);
 }
 
-@media (--xl-viewport) {
-  .u-container {
-    max-width: 100rem;
-    padding: 0 6rem;
+@media (--hero-viewport) {
+  .u-hero-wrapper {
+    width: var(--xl-min);
+    padding-left: var(--outer-margin);
   }
 }
 
