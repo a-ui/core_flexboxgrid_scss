@@ -1,21 +1,3 @@
-/*:root {
-  --gutter-width: 1.5rem;
-  --outer-margin: 0.75rem;
-  --gutter-compensation: calc((var(--gutter-width) * 0.5) * -1);
-  --half-gutter-width: calc((var(--gutter-width) * 0.5));
-  --xs-min: 30;
-  --sm-min: 45;
-  --md-min: 62;
-  --lg-min: 75;
-  --screen-xs-min: var(--xs-min)em;
-  --screen-sm-min: var(--sm-min)em;
-  --screen-md-min: var(--md-min)em;
-  --screen-lg-min: var(--lg-min)em;
-  --container-sm: calc(var(--sm-min) + var(--gutter-width));
-  --container-md: calc(var(--md-min) + var(--gutter-width));
-  --container-lg: calc(var(--lg-min) + var(--gutter-width));
-}*/
-
 :root {
   /* 480px */
   /* 720px */
@@ -23,24 +5,28 @@
   /* 1200px */
 }
 
+/* (1200+3*24+72) */
+
 .u-container {
   box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  padding: 0 .75rem;
+  margin: 0 auto;
+  max-width: 75rem;
+  padding: 0 1.5rem;
+  width: 100%;
 }
 
-@media only screen and (min-width: 30rem) {
-  .u-container {
-    padding: 0 1.5rem;
-  }
+.u-hero-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 6rem;
+  /* A-logo + 24px */
+  padding-right: 1.5rem;
 }
 
-@media only screen and (min-width: 75rem) {
-  .u-container {
-    max-width: 100rem;
-    padding: 0 6rem;
+@media only screen and (min-width: 84rem) {
+  .u-hero-wrapper {
+    width: 75rem;
+    padding-left: 1.5rem;
   }
 }
 
