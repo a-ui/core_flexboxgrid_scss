@@ -1,6 +1,6 @@
 {
   "name": "@a-ui/flexboxgrid",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Grid based off of CSS3 flexbox specification",
   "style": "dist/flexboxgrid.css",
   "main": "dist/flexboxgrid.css",
