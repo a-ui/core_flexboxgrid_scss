@@ -5,7 +5,9 @@
   /* 1200px */
 }
 
-/* (1200+3*24+72) */
+/* (1200+72*2) */
+
+/* (1200+144*2) */
 
 .u-container {
   box-sizing: border-box;
@@ -23,8 +25,20 @@
   padding-right: 1.5rem;
 }
 
+.u-hero-wrapper--double {
+  padding-left: 10.5rem;
+  /* Double logo + 24px */
+}
+
 @media only screen and (min-width: 84rem) {
-  .u-hero-wrapper {
+  .u-hero-wrapper:not(.u-hero-wrapper--double) {
+    width: 75rem;
+    padding-left: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 93rem) {
+  .u-hero-wrapper--double {
     width: 75rem;
     padding-left: 1.5rem;
   }

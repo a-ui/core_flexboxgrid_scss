@@ -14,7 +14,9 @@
 @custom-media --md-viewport only screen and (min-width: 45rem);
 @custom-media --lg-viewport only screen and (min-width: 62rem);
 @custom-media --xl-viewport only screen and (min-width: 75rem);
-@custom-media --hero-viewport only screen and (min-width: 84rem); /* (1200+3*24+72) */
+
+@custom-media --hero-viewport only screen and (min-width: 84rem); /* (1200+72*2) */
+@custom-media --hero-double-viewport only screen and (min-width: 93rem); /* (1200+144*2) */
 
 @custom-media --xs-only only screen and (max-width: 29.9375rem);
 @custom-media --sm-only only screen and (min-width: 30rem) and (max-width: 44.9375rem);
@@ -37,8 +39,19 @@
   padding-right: var(--outer-margin);
 }
 
+.u-hero-wrapper--double {
+  padding-left: 10.5rem; /* Double logo + 24px */
+}
+
 @media (--hero-viewport) {
-  .u-hero-wrapper {
+  .u-hero-wrapper:not(.u-hero-wrapper--double) {
+    width: var(--xl-min);
+    padding-left: var(--outer-margin);
+  }
+}
+
+@media (--hero-double-viewport) {
+  .u-hero-wrapper--double {
     width: var(--xl-min);
     padding-left: var(--outer-margin);
   }
